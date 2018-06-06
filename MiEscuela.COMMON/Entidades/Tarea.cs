@@ -13,5 +13,19 @@ namespace MiEscuela.COMMON.Entidades
         public bool Entregada { get; set; }
         public string Descripcion { get; set; }
         public ObjectId IdTarea { get; set; }
+
+        public override string ToString()
+        {
+            string entrega;
+            if (Entregada == true)
+            {
+                entrega = "Entregada";
+            }
+            else
+            {
+                entrega = "No Entregada";
+            }
+            return Titulo + ": Estado: " + entrega;
+        }
     }
 }

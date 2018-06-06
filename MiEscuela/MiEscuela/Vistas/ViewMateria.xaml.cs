@@ -71,9 +71,19 @@ namespace MiEscuela.Vistas
                     DisplayAlert("Mi Escuela", "No se pudo eliminar la materia", "Ok");
                 }
             };
+
+            lstTareas.ItemTapped += (sender, e) =>
+            {
+                if (lstTareas.SelectedItem != null)
+                {
+                    Navigation.PushAsync(new ViewTarea(lstTareas.SelectedItem as Tarea, false));
+                }
+            };
         }
 
-        private void ViewMateria_Appering(object sender, EventArgs e)
+
+
+private void ViewMateria_Appering(object sender, EventArgs e)
         {
             ITareaManager tareaManager = new TareaManager(new GenericRepository<Tarea>());
             lstTareas.ItemsSource = null;

@@ -1,5 +1,7 @@
-﻿using MiEscuela.COMMON.Entidades;
+﻿using MiEscuela.BIZ;
+using MiEscuela.COMMON.Entidades;
 using MiEscuela.COMMON.Interfaces;
+using MiEscuela.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +17,15 @@ namespace MiEscuela.Vistas
 	public partial class ViewTarea : ContentPage
 	{
         Tarea tarea;
-        ITareaManager tareaManager;
         bool nuevo;
 		public ViewTarea (Tarea t, bool n)
 		{
+            ITareaManager tareaManager = new TareaManager(new GenericRepository<Tarea>());
             tarea = t;
             nuevo = n;
 			InitializeComponent ();
+
+            contenedor.BindingContext = tarea;
 
             btnGuardar.Clicked += (sender, e) =>
             {
