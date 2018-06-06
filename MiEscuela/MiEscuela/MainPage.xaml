@@ -4,11 +4,27 @@
              xmlns:local="clr-namespace:MiEscuela"
              x:Class="MiEscuela.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Margin="5" Source="escuela.png"/>
+
+        <StackLayout Grid.Row="1">
+            <Label HorizontalOptions="Center" Text="Usuario"/>
+            <Entry x:Name="txbUsuario" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Placeholder="usuario@correo.com" Keyboard="Email"/>
+
+            <Label HorizontalOptions="Center" Text="Contraseña"/>
+            <Entry x:Name="pssClave" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" IsPassword="True"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2">
+            <Button Style="{StaticResource btnAceptar}" Text="Iniciar Sesión" x:Name="btnIniciarSesion"/>
+            <Button Style="{StaticResource btnGuardar}" Text="Crear Cuenta" x:Name="btnCrearCuenta"/>
+        </StackLayout>
+    </Grid>
 
 </ContentPage>
