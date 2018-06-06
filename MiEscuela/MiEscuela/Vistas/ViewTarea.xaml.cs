@@ -39,7 +39,7 @@ namespace MiEscuela.Vistas
                 }
                 if (tarea != null)
                 {
-                    DisplayAlert("Mi Escuela", "Materia Guardada", "OK");
+                    DisplayAlert("Mi Escuela", "Tarea Guardada", "OK");
                     Navigation.PopAsync();
                 }
                 else
@@ -52,7 +52,7 @@ namespace MiEscuela.Vistas
              {
                  if (tareaManager.Eliminar(tarea.Id))
                  {
-                     DisplayAlert("Mi Escuela", "Materia Eliminada Correctamente", "Ok");
+                     DisplayAlert("Mi Escuela", "Tarea Eliminada Correctamente", "Ok");
                      Navigation.PopAsync();
                  }
                  else
