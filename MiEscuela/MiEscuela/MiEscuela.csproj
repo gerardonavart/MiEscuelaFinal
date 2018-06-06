@@ -9,6 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\MiEscuela.BIZ\MiEscuela.BIZ.csproj" />
+    <ProjectReference Include="..\..\MiEscuela.COMMON\MiEscuela.COMMON.csproj" />
+    <ProjectReference Include="..\..\MiEscuela.DAL\MiEscuela.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Vistas\ViewCompaniero.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
