@@ -48,6 +48,7 @@ namespace MiEscuela.Vistas
                 if (manager.Eliminar(companiero.Id))
                 {
                     DisplayAlert("Mi Escuela", "Compañero Eliminado", "OK");
+                    Navigation.PopAsync();
                 }
                 else
                 {

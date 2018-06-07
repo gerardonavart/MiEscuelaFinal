@@ -11,8 +11,9 @@ namespace MiEscuela.COMMON.Entidades
         public string Titulo { get; set; }
         public DateTime FechaEntrega { get; set; }
         public bool Entregada { get; set; }
+        public bool Prioridad { get; set; }
         public string Descripcion { get; set; }
-        public ObjectId IdTarea { get; set; }
+        public ObjectId IdTarea { get; set; }   
 
         public override string ToString()
         {
@@ -25,7 +26,17 @@ namespace MiEscuela.COMMON.Entidades
             {
                 entrega = "No Entregada";
             }
-            return Titulo + ": Estado: " + entrega;
+            string urge;
+            if (Prioridad == true)
+            {
+                urge = "Urgente";
+            }
+            else
+            {
+                urge = "Normal";
+            }
+            //return Titulo + ", Estado: " + ", Prioridad:" + urge;
+            return Titulo + ", Estado: " + entrega + ", Prioridad:" + urge ;
         }
     }
 }

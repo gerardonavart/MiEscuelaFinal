@@ -9,6 +9,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
@@ -19,16 +20,18 @@
             <Label Text="Titulo" Grid.Column="0" Grid.Row="0"/>
             <Label Text="Fecha de Entrega" Grid.Column="0" Grid.Row="1"/>
             <Label Text="Entregada" Grid.Column="0" Grid.Row="2"/>
+            <Label Text="Prioridad" Grid.Column="0" Grid.Row="3"/>
 
             <Entry x:Name="txbTitulo" Text="{Binding Titulo}" Grid.Column="1" Grid.Row="0"/>
             <DatePicker Date="{Binding FechaEntrega}" Grid.Column="1" Grid.Row="1"/>
 
             <Switch IsToggled="{Binding Entregada}" Grid.Column="1" Grid.Row="2"/>
+            <Switch IsToggled="{Binding Prioridad}" Grid.Column="1" Grid.Row="3"/>
 
-            <Entry Text="{Binding Descripcion}" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"/>
+            <Entry Text="{Binding Descripcion}" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
 
-            <Button Style="{StaticResource btnGuardar}" x:Name="btnGuardar" Grid.Column="0" Grid.Row="4"/>
-            <Button Style="{StaticResource btnEliminar}" x:Name="btnEliminar" Grid.Column="1" Grid.Row="4"/>
+            <Button Style="{StaticResource btnGuardar}" x:Name="btnGuardar" Grid.Column="0" Grid.Row="5"/>
+            <Button Style="{StaticResource btnEliminar}" x:Name="btnEliminar" Grid.Column="1" Grid.Row="5"/>
 
         </Grid>
     </ContentPage.Content>

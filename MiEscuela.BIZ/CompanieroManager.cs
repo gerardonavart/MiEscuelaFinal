@@ -29,7 +29,9 @@ namespace MiEscuela.BIZ
 
         public List<Companiero> CompanieroDeUsuario(ObjectId idUsuario)
         {
+            //repository.Read.Sort(e=> e.FechaNac == )
             return repository.Read.Where(e => e.IdUsuario == idUsuario).ToList();
+            //return repository.Read.Sort(e => e.FechaNac == id)
         }
         
         public bool Eliminar(ObjectId id)
